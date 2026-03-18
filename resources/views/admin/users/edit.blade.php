@@ -20,11 +20,7 @@
 
         <div class="mb-4">
     <label class="block mb-1">Rôle</label>
-    <!-----select name="role" id="role-select" class="w-full border p-2 rounded" required>
-        <option value="{{ $user->role === 'user' ? 'selected' : '' }}">Utilisateur simple</option>
-        <option value="{{$user->role === 'admin' ? 'selected' : '' }}">Administrateur</option>
-    </select-->
-
+    
     <select name="role" id="role-select" class="w-full border p-2 rounded" required>
         <option value="user" {{ $user->role === 'user' ? 'selected' : '' }}>Utilisateur simple</option>
         <option value="admin" {{ $user->role === 'admin' ? 'selected' : '' }}>Administrateur</option>
@@ -48,6 +44,7 @@
 @enderror
 
 <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Mettre à jour</button>
+<a href="{{ route('admin.users.index') }}" class="btn btn-secondary">↩️ Annuler</a>
     </form>
 </div>
 
