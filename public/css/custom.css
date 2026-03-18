@@ -1,0 +1,50 @@
+body{
+    background-color: rgb(211, 203, 190);
+}
+div .slogan{
+    text-align:center;
+    font-size:40px!important;
+    font-weight: bold!important;
+    animation: anime 30s infinite;
+}
+img .g-20{
+  background:transparent;
+}
+.menu{
+  background-color: greenyellow;
+}
+.bgcolor{
+  text-decoration: none;
+}
+.bgcolor:hover{
+  color: green !important;
+  
+}
+.bg{
+  background-color:rgb(71, 124, 71);
+}
+.form-control,.form-select{
+  width: 90%!important;
+}
+.input-group{
+  width: 30%!important;
+  display: inline-block;
+}
+@keyframes anime {
+    0% {
+      opacity: 1;
+      color:rgb(208, 211, 210);
+    }
+    20% {
+      opacity: 1;
+      color:rgb(8, 121, 32);
+    }
+    50%{
+        opacity: 0;
+       color: rgb(223, 18, 18);
+      }
+      100%{
+        opacity: 1;
+        color: rgb(28, 155, 60);
+      }
+  }
