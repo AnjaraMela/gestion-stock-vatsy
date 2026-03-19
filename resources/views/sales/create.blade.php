@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="container mt-4">
+    <div class="max-w-2xl mx-auto px-4 py-5">
         <h2 class="mb-4 text-success">➕ Nouvelle Vente</h2>
 
         @if(session('error'))
@@ -16,7 +16,7 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('sales.store') }}">
+        <form method="POST" action="{{ route('sales.store') }}" class="bg-white p-4 rounded shadow">
             @csrf
 
             <div class="mb-3">
@@ -53,9 +53,10 @@
                 </div>
             @endif
 
-            <div class="text-end">
-                <a href="{{ route('sales.index') }}" class="btn btn-secondary">↩️ Annuler</a>
+            <div >
+                
                 <button type="submit" class="btn btn-success">💾 Enregistrer</button>
+                <a href="{{ route('sales.index') }}" class="btn btn-secondary">↩️ Annuler</a>
             </div>
         </form>
     </div>

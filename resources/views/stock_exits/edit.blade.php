@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="container mt-4">
+    <div class="max-w-2xl mx-auto px-4 py-5">
         <h2 class="mb-4 text-success">✏️ Modifier la sortie de stock</h2>
 
         @if ($errors->any())
@@ -12,7 +12,7 @@
             </div>
         @endif
 
-        <form action="{{ route('stock_exits.update', $exit->id) }}" method="POST">
+        <form action="{{ route('stock_exits.update', $exit->id) }}" method="POST" class="bg-white p-4 rounded shadow">
             @csrf
             @method('PUT')
 

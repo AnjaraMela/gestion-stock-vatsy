@@ -1,6 +1,6 @@
 <x-app-layout>
-<div class="max-w-2xl mx-auto px-4">
-    <h1 class="text-2xl font-bold mb-4">Modifier utilisateur</h1>
+<div class="max-w-2xl mx-auto px-4 py-5">
+    <h2 class="font-bold mb-4 ">Modifier utilisateur</h2>
 
     <form action="{{ route('admin.users.update', $user->id) }}" method="POST" class="bg-white p-4 rounded shadow">
         @csrf
@@ -43,7 +43,7 @@
     <div class="text-danger text-sm mt-1">{{ $message }}</div>
 @enderror
 
-<button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Mettre à jour</button>
+<button type="submit" class="bg-yellow-500 text-white px-4 py-2 rounded">Mettre à jour</button>
 <a href="{{ route('admin.users.index') }}" class="btn btn-secondary">↩️ Annuler</a>
     </form>
 </div>

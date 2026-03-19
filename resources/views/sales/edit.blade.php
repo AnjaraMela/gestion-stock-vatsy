@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="container mt-4">
+    <div class="max-w-2xl mx-auto px-4 py-5">
         <h2 class="mb-4 text-primary">✏️ Modifier une vente</h2>
 
         {{-- Affichage des erreurs --}}
@@ -20,7 +20,7 @@
             </div>
         @endif
 
-        <form action="{{ route('sales.update', $sale->id) }}" method="POST">
+        <form action="{{ route('sales.update', $sale->id) }}" method="POST" class="bg-white p-4 rounded shadow">
             @csrf
             @method('PUT')
 
@@ -71,8 +71,9 @@
 
             {{-- Boutons --}}
             <div class="text-end">
+                
+                <button type="submit" class="btn btn-warning ">💾 Mettre à jour</button>
                 <a href="{{ route('sales.index') }}" class="btn btn-outline-secondary">Annuler</a>
-                <button type="submit" class="btn btn-primary">💾 Mettre à jour</button>
             </div>
         </form>
     </div>

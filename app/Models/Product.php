@@ -15,10 +15,11 @@ class Product extends Model
     {
         return $this->hasMany(Sale::class);
     }
-    
+   
     public function stockEntries()
     {
         return $this->hasMany(StockEntry::class);
+       
     }
 
     public function stockExits()

@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="container mt-4">
+    <div class="max-w-2xl mx-auto px-4 py-5">
         <h1 class="mb-4 text-success">➕ Ajouter une entrée de stock</h1>
 
         @if ($errors->any())
@@ -12,7 +12,7 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('stock_entries.store') }}">
+        <form method="POST" action="{{ route('stock_entries.store') }}" class="bg-white p-4 rounded shadow">
             @csrf
 
             {{-- Produit --}}
@@ -49,9 +49,11 @@
                 </div>
             @endif
 
-            <div class="text-end">
-                <a href="{{ route('stock_entries.index') }}" class="btn btn-secondary">↩️ Annuler</a>
+            <div >
+                
                 <button type="submit" class="btn btn-success">💾 Enregistrer</button>
+                <a href="{{ route('stock_entries.index') }}" class="btn btn-secondary">↩️ Annuler</a>
+                
             </div>
         </form>
     </div>

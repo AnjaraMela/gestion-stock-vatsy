@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="container mt-5">
+    <div class="max-w-2xl mx-auto px-4 py-5">
         <h2 class="mb-4 text-success">➕ Ajouter un nouveau produit</h2>
 
         @if ($errors->any())
@@ -12,7 +12,7 @@
             </div>
         @endif
 
-        <form action="{{ route('products.store') }}" method="POST">
+        <form action="{{ route('products.store') }}" method="POST" class="bg-white p-4 rounded shadow">
             @csrf
 
             <div class="mb-3">

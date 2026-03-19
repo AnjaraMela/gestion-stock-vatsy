@@ -1,7 +1,8 @@
 <x-app-layout>
-    <div class="container">
-        <h1 class="mb-4 text-success">Modifier le téléphone</h1>
-        <form action="{{ route('products.update', $product->id) }}" method="POST">
+    <div class="max-w-2xl mx-auto px-4 py-5">
+
+        <h1 class="mb-4 ">Modifier le téléphone</h1>
+        <form action="{{ route('products.update', $product->id) }}" method="POST" class="bg-white p-4 rounded shadow">
             @csrf
             @method('PUT')
 
@@ -39,7 +40,8 @@
                 <input type="number" name="sale_price" class="form-control" step="0.01" value="{{ $product->sale_price }}" required>
             </div>
 
-            <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Mettre à jour</button>
+            <button type="submit" class="bg-yellow-500 text-white px-4 py-2 rounded">Mettre à jour</button>
+            <a href="{{ route('products.index') }}" class="btn btn-secondary">↩️ Annuler</a>
         </form>
     </div>
 </x-app-layout>

@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="container mt-4">
+    <div class="max-w-2xl mx-auto px-4 py-5">
         <h2 class="mb-4 text-success">Modifier l'entrée de stock</h2>
 
         @if ($errors->any())
@@ -12,7 +12,7 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('stock_entries.update', $stockEntry->id) }}">
+        <form method="POST" action="{{ route('stock_entries.update', $stockEntry->id) }}" class="bg-white p-4 rounded shadow">
             @csrf
             @method('PUT')
 
@@ -31,7 +31,7 @@
             {{-- Date d'entrée --}}
             <div class="mb-3">
                 <label for="entry_date" class="form-label">Date d'entrée</label>
-                <input type="date" name="entry_date" id="entry_date" class="form-control" required value="{{ old('entry_date', $stockEntry->entry_date->format('Y-m-d')) }}">
+                <input type="date" name="entry_date" id="entry_date" class="form-control" required value="{{ old('entry_date', date('Y-m-d')) }}">
             </div>
 
             {{-- Magasin (affiché uniquement pour l'admin) --}}
@@ -42,9 +42,10 @@
                 </div>
             @endif
 
-            <div class="text-end">
+            <div >
+                
+                <button type="submit" class="btn btn-warning ">💾 Mettre à jour</button>
                 <a href="{{ route('stock_entries.index') }}" class="btn btn-secondary">↩️ Annuler</a>
-                <button type="submit" class="btn btn-primary">💾 Mettre à jour</button>
             </div>
         </form>
     </div>

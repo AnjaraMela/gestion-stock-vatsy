@@ -1,8 +1,8 @@
 <x-app-layout>
-<div class="container">
+    <div class="max-w-2xl mx-auto px-4 py-5">
     <h1>Modifier le magasin</h1>
 
-    <form action="{{ route('stores.update', $store->id) }}" method="POST">
+    <form action="{{ route('stores.update', $store->id) }}" method="POST" class="bg-white p-4 rounded shadow">
         @csrf
         @method('PUT')
 
@@ -18,7 +18,7 @@
             @error('location') <div class="text-danger">{{ $message }}</div> @enderror
         </div>
 
-        <button type="submit" class="btn btn-primary">Mettre à jour</button>
+        <button type="submit" class="btn btn-warning text-white">Mettre à jour</button>
         <a href="{{ route('stores.index') }}" class="btn btn-secondary">Annuler</a>
     </form>
 </div>

@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="container mt-4">
+    <div  class="max-w-2xl mx-auto px-4 py-5">
         <h2 class="mb-4 text-success">➖ Nouvelle sortie de stock</h2>
 
         @if ($errors->any())
@@ -12,7 +12,7 @@
             </div>
         @endif
 
-        <form action="{{ route('stock_exits.store') }}" method="POST">
+        <form action="{{ route('stock_exits.store') }}" method="POST" class="bg-white p-4 rounded shadow">
             @csrf
 
             {{-- Produit --}}
@@ -66,9 +66,11 @@
 
 
             {{-- Bouton --}}
-            <div class="text-end">
-                <a href="{{ route('stock_exits.index') }}" class="btn btn-secondary">↩️ Annuler</a>
-                <button type="submit" class="btn btn-success">💾 Enregistrer la sortie</button>
+            <div >
+                
+                <button type="submit" class="btn btn-danger">💾 Enregistrer la sortie</button>
+                <a href="{{ route('stock_exits.index') }}" class="btn btn-secondary">↩️Retour</a>
+
             </div>
         </form>
     </div>
